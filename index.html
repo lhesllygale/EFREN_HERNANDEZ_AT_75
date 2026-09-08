@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- COVER -->
+    <div class="cover" id="cover">
+
+        <div class="envelope">💌</div>
+
+        <h1>You're Invited!</h1>
+
+        <p>to a special birthday celebration</p>
+
+        <button onclick="openInvitation()">
+            Open Invitation
+        </button>
+
+    </div>
+
+
+    <!-- INVITATION -->
+    <div class="invitation-page" id="invitationPage">
+
+        <div class="top-bar">
+            <button class="back-button" onclick="goBack()">
+                ← Back
+            </button>
+
+            <h2>Birthday Invitation</h2>
+        </div>
+
+
+        <div class="invitation-container">
+
+            <img src="page1.png" alt="Invitation Page 1">
+            <img src="page2.png" alt="Invitation Page 2">
+            <img src="page3.png" alt="Invitation Page 3">
+            <img src="page4.png" alt="Invitation Page 4">
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function openInvitation() {
+            document.getElementById("cover").style.display = "none";
+            document.getElementById("invitationPage").style.display = "block";
+        }
+
+
+        function goBack() {
+            document.getElementById("invitationPage").style.display = "none";
+            document.getElementById("cover").style.display = "flex";
+        }
+
+    </script>
+
+</body>
+</html>
