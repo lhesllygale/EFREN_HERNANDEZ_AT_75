@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="cover" id="cover">
+
+        <div class="envelope">
+            💌
+        </div>
+
+        <h1>You're Invited!</h1>
+
+        <p>to a special birthday celebration</p>
+
+        <button onclick="openInvitation()">
+            Open Invitation
+        </button>
+
+    </div>
+
+
+    <!-- PDF VIEWER -->
+    <div class="pdf-page" id="pdfPage">
+
+        <div class="pdf-header">
+            <button onclick="goBack()">← Back</button>
+
+            <h2>Birthday Invitation</h2>
+        </div>
+
+        <iframe
+            src="invitation.pdf"
+            title="Birthday Invitation PDF">
+        </iframe>
+
+    </div>
+
+
+    <script>
+
+        function openInvitation() {
+            document.getElementById("cover").style.display = "none";
+            document.getElementById("pdfPage").style.display = "flex";
+        }
+
+        function goBack() {
+            document.getElementById("pdfPage").style.display = "none";
+            document.getElementById("cover").style.display = "flex";
+        }
+
+    </script>
+
+</body>
+
+</html>

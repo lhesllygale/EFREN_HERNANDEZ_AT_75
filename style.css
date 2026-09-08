@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f3e7d3;
+    color: #3e3025;
+}
+
+
+/* =========================
+   COVER PAGE
+========================= */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ead2b5,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #d8b894,
+            transparent 40%
+        ),
+        #f3e7d3;
+}
+
+.envelope {
+    font-size: 80px;
+    margin-bottom: 25px;
+
+    animation: float 2s ease-in-out infinite;
+}
+
+.cover h1 {
+    font-size: 64px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.cover p {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+.cover button {
+    border: none;
+
+    padding: 16px 38px;
+
+    background: #604936;
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: bold;
+
+    border-radius: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cover button:hover {
+    background: #3e3025;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PDF PAGE
+========================= */
+
+.pdf-page {
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+
+    flex-direction: column;
+
+    background: #2e2925;
+}
+
+
+/* PDF HEADER */
+
+.pdf-header {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: #604936;
+    color: white;
+
+    position: relative;
+}
+
+.pdf-header h2 {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 20px;
+
+    white-space: nowrap;
+}
+
+.pdf-header button {
+    border: none;
+
+    background: white;
+    color: #604936;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.pdf-header button:hover {
+    background: #ead2b5;
+}
+
+
+/* PDF */
+
+iframe {
+    width: 100%;
+    height: calc(100vh - 65px);
+
+    border: none;
+
+    background: white;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover h1 {
+        font-size: 42px;
+    }
+
+    .cover p {
+        font-size: 17px;
+    }
+
+    .envelope {
+        font-size: 65px;
+    }
+
+    .cover button {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+    .pdf-header {
+        height: 60px;
+    }
+
+    .pdf-header h2 {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: calc(100vh - 60px);
+    }
+
+}
