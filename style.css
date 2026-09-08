@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Georgia, serif;
+    background: #f5e5c7;
+}
+
+
+/* =========================
+   COVER PAGE
+========================= */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: #f5e5c7;
+}
+
+
+.envelope {
+    font-size: 70px;
+    margin-bottom: 20px;
+
+    animation: float 2s ease-in-out infinite;
+}
+
+
+.cover h1 {
+    font-size: 55px;
+    color: #5d4037;
+    margin-bottom: 15px;
+}
+
+
+.cover p {
+    font-size: 20px;
+    font-style: italic;
+    color: #6d5145;
+
+    margin-bottom: 30px;
+}
+
+
+.cover button {
+    border: none;
+
+    background: #704f3a;
+    color: white;
+
+    padding: 16px 35px;
+
+    font-size: 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.cover button:hover {
+    transform: scale(1.05);
+    background: #563a2b;
+}
+
+
+/* =========================
+   INVITATION PAGE
+========================= */
+
+.invitation-page {
+    display: none;
+
+    min-height: 100vh;
+
+    background: #eeeeee;
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    width: 100%;
+
+    background: #704f3a;
+    color: white;
+
+    padding: 12px 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.top-bar h2 {
+    font-size: 25px;
+}
+
+
+.back-button {
+    border: none;
+
+    background: white;
+    color: #5d4037;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+}
+
+
+/* PDF CONTAINER */
+
+#pdf-container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: #eeeeee;
+}
+
+
+/* PDF CANVAS */
+
+.pdf-page {
+    display: block;
+
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 0 auto 15px auto;
+
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ERROR */
+
+.error {
+    text-align: center;
+
+    padding: 40px;
+
+    color: red;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover {
+        padding: 20px;
+    }
+
+
+    .envelope {
+        font-size: 60px;
+    }
+
+
+    .cover h1 {
+        font-size: 42px;
+    }
+
+
+    .cover p {
+        font-size: 17px;
+    }
+
+
+    .cover button {
+        font-size: 16px;
+
+        padding: 14px 28px;
+    }
+
+
+    .top-bar {
+        padding: 10px;
+
+        gap: 10px;
+    }
+
+
+    .top-bar h2 {
+        font-size: 20px;
+    }
+
+
+    .back-button {
+        padding: 10px 18px;
+
+        font-size: 15px;
+    }
+
+
+    #pdf-container {
+        width: 100%;
+    }
+
+
+    .pdf-page {
+        width: 100% !important;
+
+        margin-bottom: 8px;
+
+        box-shadow: none;
+    }
+
+}
+
+
+/* ANIMATION */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
